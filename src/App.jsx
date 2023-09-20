@@ -2,6 +2,7 @@
 import { Container,Row,Col } from 'react-bootstrap'
 import './App.css'
 import Dashboard from './components/Dashboard'
+import BlogPage from './components/BlogPage'
 
 function App() {
   
@@ -12,7 +13,8 @@ function App() {
          <Col>
          <h1 className='text-center'>Our Blog</h1>
          </Col>
-         <Dashboard/>
+         <BlogPage/>
+         {/* <Dashboard/> */}
       </Row>
     </Container>
   )
