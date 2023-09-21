@@ -6,11 +6,24 @@ import {
   Accordion,
   ListGroup,
 } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import { useNavigate } from "react-router-dom";
+import { checkToken } from "../Services/DataService";
 
 const Dashboard = () => {
+let navigate = useNavigate()
+ useEffect(() => {
+  if(!checkToken())
+  {
+    navigate('/Login')
+  }
+
+
+ },[])
+
+
   const [show, setShow] = useState(false);
   const handleSetTitle = () => setBlogTitle(e.target.value);
   const handleDescription = () => setBlogDescription(e.target.value);
