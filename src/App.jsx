@@ -12,11 +12,12 @@ function App() {
   
 
   return (
+    <>
     <BrowserRouter>
  <Container>
       <Row>
          <Col>
-         <h1 className='text-center'>Our Blog</h1>
+         <h1 className='text-center'>Adventure Time Blog</h1>
          </Col>
          <NavBar/>
          {/* <Login/> */}
@@ -35,7 +36,8 @@ function App() {
       </Row>
     </Container>
     </BrowserRouter>
-   
+    <footer className='text-center'>@IDKWIAD</footer>
+   </>
   )
 }
 
